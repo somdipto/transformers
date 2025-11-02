@@ -101,5 +101,5 @@ jobs:
           context: ./docker/transformers-pytorch-deepspeed-latest-gpu
           build-args: |
             REF=run_slow_v2_backup
-          push: false
+          push: true
           tags: huggingface/transformers-pytorch-deepspeed-latest-gpu${{ inputs.image_postfix }}
