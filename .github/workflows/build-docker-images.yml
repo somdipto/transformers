@@ -80,10 +80,7 @@ jobs:
   latest-torch-deepspeed-docker:
     name: "Latest PyTorch + DeepSpeed"
     runs-on:
-      group: aws-g5-4xlarge-cache
-    container:
-      image: huggingface/transformers-pytorch-deepspeed-latest-gpu
-      options: --gpus all --shm-size "16gb" --ipc host -v /mnt/cache/.cache/huggingface:/mnt/cache/
+      group: aws-general-8-plus
     steps:
       -
         name: Set up Docker Buildx
